@@ -4,88 +4,79 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        menu();
     }
 
-    public static void menuOperaciones(){
-        Titular titular = new Titular(0, 0 , 0 , 0 , "" , "" , 0);
-        Scanner scanner = new Scanner(System.in);
-        int respuesta;
 
-        System.out.println("Ingrese la operacion que quiere realizar");
-        System.out.println("1 - Realizar operaciones sobre un docente titular");
-        System.out.println("2 - Realizar operaciones sobre un docente suplente");
-        System.out.println("0 - No realizar ninguna operacion y salir del programa");
+    public static void menu(){
+Scanner scanner = new Scanner(System.in);
+boolean exit = false;
 
-        System.out.print("Ingrese su eleccion: ");
-        respuesta = scanner.nextInt();
+while (!exit) {
+    System.out.println("Menu principal:");
+    System.out.println("1. Submenu 1");
+    System.out.println("2. Submenu 2");
+    System.out.println("3. Salir");
+    System.out.print("Seleccione una opción: ");
+    int option = scanner.nextInt();
 
-        switch (respuesta){
-            case 1:
-                System.out.println("Has seleccionado docente titular!");
-                System.out.println();
-                System.out.println("Ingrese la operacion a realizar");
-                System.out.println("1- ingresar datos");
-                System.out.println("0 - salir");
-                System.out.print("Operacion a realizar: ");
-                respuesta = scanner.nextInt();
-                switch (respuesta){
+    switch (option) {
+        case 1:
+            boolean exitSubmenu1 = false;
+            while (!exitSubmenu1) {
+                System.out.println("Submenu 1:");
+                System.out.println("1. Opción 1");
+                System.out.println("2. Opción 2");
+                System.out.println("3. Volver al menu principal");
+                System.out.print("Seleccione una opción: ");
+                int subOption1 = scanner.nextInt();
+
+                switch (subOption1) {
                     case 1:
-                        System.out.print("Ingrese el nombre: ");
-                        titular.setNombre(scanner.next());
-
-                        System.out.print("Ingrese el apellido: ");
-                        titular.setApellido(scanner.next());
-
-                        System.out.print("Ingrese la edad: ");
-                        titular.setEdad(scanner.nextInt());
-
-                        System.out.print("Ingrese el numero de legajo: ");
-                        titular.setNumLegajo(scanner.nextInt());
-
-                        System.out.print("Ingrese el anio de nacimiento: ");
-                        titular.setNacimiento(scanner.nextInt());
-
-                        System.out.print("Ingrese el salario: ");
-                        titular.setSalario(scanner.nextInt());
-
-                        System.out.print("Ingresar los anios de antiguedad: ");
-                        titular.setAntiguedad(scanner.nextInt());
-
-                        if(titular.calcular_plus_salarial() == titular.getSalario()){
-                            System.out.println("Malas noticias!, no se ha aplicado el plus salarial");
-                            System.out.println();
-                            System.out.println("El salario es de " + titular.getSalario()
-                                    + " pesos");
-                        }else{
-                            System.out.println("Felicitaciones!, se ha aplicado el plus salarial");
-                            System.out.println();
-                            System.out.println("El salario es de " +
-                                    titular.calcular_plus_salarial() + " pesos");
-                        }
+                        System.out.println("Has seleccionado Opción 1 del Submenu 1");
                         break;
-                    case 0:
+                    case 2:
+                        System.out.println("Has seleccionado Opción 2 del Submenu 1");
                         break;
+                    case 3:
+                        exitSubmenu1 = true;
+                        break;
+                    default:
+                        System.out.println("Opción no válida");
                 }
-                break;
-            case 2:
-                System.out.println("Has seleccionado docente suplente!");
-                System.out.println();
-                System.out.println("Ingrese la operacion a realizar");
-                System.out.println("1- ingresar datos");
-                System.out.println("0 - salir");
-                System.out.print("Operacion a realizar: ");
-                respuesta = scanner.nextInt();
-                switch (respuesta){
+            }
+            break;
+        case 2:
+            boolean exitSubmenu2 = false;
+            while (!exitSubmenu2) {
+                System.out.println("Submenu 2:");
+                System.out.println("1. Opción 1");
+                System.out.println("2. Opción 2");
+                System.out.println("3. Volver al menu principal");
+                System.out.print("Seleccione una opción: ");
+                int subOption2 = scanner.nextInt();
+
+                switch (subOption2) {
                     case 1:
+                        System.out.println("Has seleccionado Opción 1 del Submenu 2");
                         break;
-                    case 0:
+                    case 2:
+                        System.out.println("Has seleccionado Opción 2 del Submenu 2");
                         break;
+                    case 3:
+                        exitSubmenu2 = true;
+                        break;
+                    default:
+                        System.out.println("Opción no válida");
                 }
-                break;
-            case 0:
-                System.out.println("No va a realizar ninguna operacion");
-                System.out.println("saliendo del programa...");
-                break;
-        }
+            }
+            break;
+        case 3:
+            exit = true;
+            break;
+        default:
+            System.out.println("Opción no válida");
+    }
+}
     }
 }

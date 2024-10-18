@@ -4,13 +4,10 @@ package org.poo;
  * Clase Suplente que extiende de Docente
  */
 public class Suplente extends Docente{
-
     private String zona_rural;
-    public Suplente(){
 
-    }
-    public Suplente(int numLegajo, int nacimiento, int edad, int salario, String nombre, String apellido, String zona_rural) {
-        super(numLegajo, nacimiento, edad, salario, nombre, apellido);
+    public Suplente(String nombre, String apellido, int numLegajo, int edad, int salario, int nacimiento, String zona_rural) {
+        super(nombre, apellido, numLegajo, edad, salario, nacimiento);
         this.zona_rural = zona_rural;
     }
 
