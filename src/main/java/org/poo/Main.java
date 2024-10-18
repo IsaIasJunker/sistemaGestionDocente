@@ -4,14 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-
-        menuOperaciones();
     }
 
-    /**
-     * Metodo para seleccionar con que docente realizar operaciones
-     */
     public static void menuOperaciones(){
         Titular titular = new Titular(0, 0 , 0 , 0 , "" , "" , 0);
         Scanner scanner = new Scanner(System.in);

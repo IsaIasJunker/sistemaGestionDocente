@@ -6,7 +6,9 @@ package org.poo;
 public class Suplente extends Docente{
 
     private String zona_rural;
+    public Suplente(){
 
+    }
     public Suplente(int numLegajo, int nacimiento, int edad, int salario, String nombre, String apellido, String zona_rural) {
         super(numLegajo, nacimiento, edad, salario, nombre, apellido);
         this.zona_rural = zona_rural;

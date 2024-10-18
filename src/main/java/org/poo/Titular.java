@@ -6,6 +6,8 @@ package org.poo;
 public class Titular extends Docente{
     private int antiguedad;
 
+    public Titular (){
+    }
     public Titular(int numLegajo, int nacimiento, int edad, int salario, String nombre, String apellido, int antiguedad) {
         super(numLegajo, nacimiento, edad, salario, nombre, apellido);
         this.antiguedad = antiguedad;

@@ -9,6 +9,8 @@ public abstract class Docente implements Calculo_salarial {
     final int PLUS_RURALIDAD = 80000;
 
     //Constructor
+    public Docente(){
+    }
     public Docente(int numLegajo, int nacimiento, int edad, int salario, String nombre, String apellido) {
         this.numLegajo = numLegajo;
         this.nacimiento = nacimiento;
