@@ -22,7 +22,7 @@ public class Titular extends Docente{
     @Override
     public int calcular_plus_salarial(){
         int salarioBasico =0;
-        if(super.getEdad() == 30 && this.antiguedad >= 6){
+        if(super.getEdad() >= 30 && this.antiguedad >= 6){
             salarioBasico = super.getSalario() + super.getPLUS_RURALIDAD();
         }else{
             salarioBasico = super.getSalario();
