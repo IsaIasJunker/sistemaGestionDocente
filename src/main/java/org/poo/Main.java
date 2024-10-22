@@ -4,15 +4,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        pedirDatos();
+        menuDocentes();
     }
 
-    public static void pedirDatos(){
+    public static void menuDocentes(){
         Scanner scanner = new Scanner(System.in);
         Titular titular = new Titular();
         Suplente suplente = new Suplente();
-
         int respuesta;
 
         System.out.println("Bienvenido al programa de gestion de docentes");
@@ -22,6 +20,7 @@ public class Main {
         System.out.print("Respuesta: ");
         respuesta = scanner.nextInt();
 
+        //Compruebo que la respuesta sea valida
         while (respuesta != 1 && respuesta != 2){
             System.out.println("Respuesta invalida");
             System.out.print("Respuesta: ");
