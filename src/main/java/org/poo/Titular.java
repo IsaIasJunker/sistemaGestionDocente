@@ -1,13 +1,21 @@
 package org.poo;
 import java.util.Scanner;
+
+/**
+ * Clase Titular que implementa la interface Plus_Salarial
+ */
 public class Titular implements Plus_Salarial{
 
     final int PLUS_SALARIAL = 80000;
-
     String nombre , apellido;
     int  antiguedad,edad , fechaNacimiento, numeroLegajo , salario;
+
+    /**
+     * Constructor vacio
+     */
     public Titular() {
     }
+    //Getters & setters
     public int getPLUS_SALARIAL() {
         return PLUS_SALARIAL;
     }
@@ -56,7 +64,7 @@ public class Titular implements Plus_Salarial{
 
     /**
      * Metodo que calcula el plus salarial dependiendo de la edad y la antiguedad
-     * @return el salario mas el plus salarial
+     * @return el salario mas el plus salarial si se cumplen las condiciones
      */
     @Override
     public int calulaPlusSalarial() {
