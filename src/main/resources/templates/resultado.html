@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+<h1>Detalles del Docente</h1>
+<p><strong>Nombre:</strong> <span th:text="${docente.nombre}"></span></p>
+<p><strong>Apellido:</strong> <span th:text="${docente.apellido}"></span></p>
+<p><strong>Tipo de Docente:</strong> <span th:text="${docente.cargo}"></span></p>
+<p><strong>Salario Original:</strong> <span th:text="${docente.salario}"></span></p>
+<p><strong>Plus salarial:</strong> <span th:text="${docente.PLUS_SALARIAL}"></span></p>
+<p><strong>Salario Final:</strong> <span th:text="${salarioFinal}"></span></p>
+</body>
+</html>
