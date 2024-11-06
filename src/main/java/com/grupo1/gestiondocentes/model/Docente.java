@@ -10,6 +10,23 @@ public class Docente {
     private String nombre , apellido, cargo , zonaRural;
     private int  antiguedad,edad , anio_nacimiento, legajo , salario;
 
+    //Constructores 
+    public Docente(String nombre, String apellido, String cargo, String zonaRural, int antiguedad,
+                   int edad, int anio_nacimiento, int legajo, int salario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cargo = cargo;
+        this.zonaRural = zonaRural;
+        this.antiguedad = antiguedad;
+        this.edad = edad;
+        this.anio_nacimiento = anio_nacimiento;
+        this.legajo = legajo;
+        this.salario = salario;
+    }
+
+    public Docente() {
+    }
+
     //Getters and Setters
     public int getPLUS_SALARIAL() {
         return PLUS_SALARIAL;
